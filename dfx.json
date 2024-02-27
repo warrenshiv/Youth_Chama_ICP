@@ -1,0 +1,30 @@
+{
+  "canisters": {
+    "youth_chama_backend": {
+      "candid": "src/youth_chama_backend/youth_chama_backend.did",
+      "package": "youth_chama_backend",
+      "type": "rust"
+    },
+    "youth_chama_frontend": {
+      "dependencies": [
+        "youth_chama_backend"
+      ],
+      "frontend": {
+        "entrypoint": "src/youth_chama_frontend/src/index.html"
+      },
+      "source": [
+        "src/youth_chama_frontend/assets",
+        "dist/youth_chama_frontend/"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}
